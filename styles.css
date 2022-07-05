@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(97, 97, 97);
+}
+
+#top {
+    position:   lative;
+    box-sizing: border-box;
+    margin: 0;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(48, 48, 48);
+
+}
+
+
+
+#top_header {
+    padding: 25px;
+    height: max-content;
+    width: max-content;
+    margin: auto;
+}
+
+#mid{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(97, 97, 97);
+
+}
+
+#mid_box{
+    margin: auto;
+    text-align: center;
+    height: max-content;
+    width: max-content;
+    padding: 2%;
+
+}
+
+#mid_content{
+    margin: auto;
+    text-align: center;
+    height: max-content;
+    width: 400px;
+    padding: 2%;
+    border: 3px solid black;
+    border-width: 5px;
+    border-radius: 10%;
+    font-size: 15px;
+
+}
+
+#bottom {
+    background-color: rgb(43, 43, 43);
+    bottom: 0;
+    padding: 1%;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.link {
+    text-align: justify;
+    color: white;
+    text-decoration: none;
+    border: 3px solid;
+    padding: 5px;    
+
+}
+
+.link:hover {
+    text-align: justify;
+    text-decoration: none;
+    border: 3px solid;
+    padding: 5px;
+    background-color: rgb(143, 143, 143);    
+
+}
+
+input[type=text] {
+    background: none;
+    border-style: none;
+    font-style: italic;
+    text-align: center;
+    width: 80%;
+    padding: 12px 20px;
+    border-bottom: 3px solid white;
+    box-sizing: border-box;
+  }
+
+input[type=password] {
+    background: none;
+    border-style: none;
+    font-style: italic;
+    text-align: center;
+    width: 80%;
+    padding: 12px 20px;
+    border-bottom: 3px solid white;
+    box-sizing: border-box;
+  }
+
+  .buttom{
+    text-align: justify;
+    background: none;
+    color: white;
+    text-decoration: none;
+    border: 3px solid;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+
+  }
+
+  .buttom:hover{
+    text-align: justify;
+    background: none;
+    color: white;
+    background-color: rgb(143, 143, 143);
+    text-decoration: none;
+    border: 3px solid;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+
+  }
+
+#error {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+
+}

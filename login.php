@@ -5,8 +5,9 @@
 
     session_start();
 
-    if (!empty($_SESSION['logged'])  && $_SESSION['logged'] == true):
+    if (!empty($_SESSION['logged']) && $_SESSION['logged'] == true):
         header("Location: home.php");
+    
     else:
 
         if (!empty($_POST['login'])):
@@ -49,30 +50,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div LINKS>
+        <link rel="stylesheet" href="./styles.css"/>
+        <!-- Font Nunito Bold 700 Italic 'font-family: 'Nunito', sans-serif;'-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    </div>
     <title>Login</title>
 </head>
 <body>
+    <div id="top"   >
+        <div id="top_header">
+            <h1>LOGIN</h1>
+        </div>
+    </div>
     
-    <h1>LOGIN</h1>
+    <div id="error">
+        <?php
+        if (!empty($messages)):
+            echo "ERROR! <br>" ;
+            foreach ($messages as $show) {
+                 echo $show."<br>";
+             }
+        endif;
+        ?>
+    </div>
 
-    <?php
-
-    if (!empty($messages)):
-        foreach ($messages as $show) {
-             echo $show."<br>";
-         } 
-    endif;
-
-    ?>
-
-    <form name="signUser" method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
-
-        <label>Nome de Usuário: <label><input type="text" name="user" id="user" placeholder="Usuário"><br><br>
-        <label>Senha: <label><input type="password"  name="password" id="password" placeholder="Senha"><br><br>
-        <input type="submit" name="login" id="login" value="Entrar">
-        <a href="./signup.php"><input type="button" value="Cadastrar-se" ></a>
-
-    </form>
-
+<div id="mid">
+        <div id="mid_box">    
+            <div id="mid_content">
+                <form name="signUser" method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
+                    <label>Username: <label><br><br><input type="text" name="user" id="user" placeholder="Type your username"><br><br><br>
+                    <label>Password: <label><br><br><input type="password"  name="password" id="password" placeholder="Type your password"><br><br><br>
+                    <input class=buttom type="submit" name="login" id="login" value="Sign in">
+                    <a class="link" href="./signup.php"> Create Your Account</a>
+                </form>
+            </div>
+        </div> 
+    </div>
 </body>
 </html>
